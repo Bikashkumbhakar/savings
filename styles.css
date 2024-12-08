@@ -1,0 +1,235 @@
+/* Body Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('111.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Circular Background Images */
+.circular-background {
+    position: absolute;
+    border-radius: 50%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.circular-image1 {
+    width: 150px;
+    height: 150px;
+    top: 20%;
+    left: 10%;
+    background-image: url('m1.webp');
+}
+
+.circular-image2 {
+    width: 200px;
+    height: 200px;
+    top: 50%;
+    right: 15%;
+    background-image: url('m2.jpeg');
+}
+
+.circular-image3 {
+    width: 180px;
+    height: 180px;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('m3.webp');
+}
+
+/* Mickey Form Styling */
+.mickey-form {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.mickey-form h2 {
+    margin-bottom: 20px;
+    color: #ff3e00;
+}
+
+.mickey-form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.mickey-form input,
+.mickey-form select {
+    width: calc(100% - 20px);
+    margin: 5px 0 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.predict-button {
+    background-color: #ff3e00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.predict-button:hover {
+    background-color: #e63200;
+}
+
+
+#parentIncomeField {
+    margin-top: 15px;
+}
+
+
+/* Loading Spinner */
+.loading-spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Semi-transparent background */
+    border-radius: 10px;
+    padding: 20px; /* Optional: Padding around the video */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.loading-animation {
+    width: 500px; /* Increase the width */
+    height: 400px; /* Increase the height */
+    border-radius: 10px; /* Optional: Rounded corners for the video */
+}
+
+
+/* Result Box Styling */
+.result-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.result-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.result-content {
+    margin-top: 10px;
+}
+
+.result-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.result-images {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.result-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.result-image:hover {
+    transform: scale(1.1);
+}
+
+.close-button {
+    background-color: #ff6f61;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #e65c50;
+}
+
+
+
+
+/* Keep the previous CSS styles; only new additions are below. */
+
+/* Feedback Box Styling */
+.feedback-box {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    border: 2px solid #ff5733;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.feedback-box label,
+.feedback-box textarea,
+.feedback-box select {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+    background-color: #ffcc00;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    background-color: #ffa500;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDFC Product Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!-- Circular Background Images -->
+        <div class="circular-background circular-image1"></div>
+        <div class="circular-background circular-image2"></div>
+        <div class="circular-background circular-image3"></div>
+
+        <!-- Prediction Form -->
+        <div id="formContainer" class="container">
+            <form id="predictForm" class="mickey-form">
+                <h2>Predict Your Ideal HDFC Product</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+                <label for="employment">Occupation:</label>
+<select id="employment" name="employment" required>
+    <option value="">Select</option>
+    <option value="student">Student</option>
+    <option value="self-employed">Self-Employed</option>
+    <option value="salaried">Salaried</option>
+    <option value="retired">Retired</option>
+</select>
+
+<!-- Parent Income Field -->
+<div id="parentIncomeField" style="display: none;">
+    <label for="parentIncome">Parent's Income (in INR):</label>
+    <input type="number" id="parentIncome" name="parentIncome" placeholder="Enter parent's income">
+</div>
+
+
+                <label for="income">Income Level:</label>
+                <select id="income" name="income" required>
+                    <option value="">Select Income Level</option>
+                    <option value="less5">Less than 5 Lakhs</option>
+                    <option value="5to10">5 Lakhs to 10 Lakhs</option>
+                    <option value="10to15">10 Lakhs to 15 Lakhs</option>
+                    <option value="15to25">15 Lakhs to 25 Lakhs</option>
+                    <option value="more25">More than 25 Lakhs</option>
+                </select>
+                
+
+                <div id="additionalFields" style="display: none;"></div>
+
+                <label for="city">Current City:</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+
+                <label for="preference">What do you like to do more?</label>
+                <select id="preference" name="preference" required>
+                    <option value="">Select</option>
+                    <option value="travel">Travel</option>
+                    <option value="shopping">Shopping</option>
+                    <option value="foodie">Foodie</option>
+                    <option value="freelancer">Freelancer</option>
+                </select>
+
+                <button type="button" id="predictButton" class="predict-button">Predict</button>
+            </form>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loadingSpinner" class="loading-spinner">
+            <video autoplay muted loop class="loading-animation">
+                <source src="load.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <!-- Prediction Result Box -->
+<div id="resultBox" class="result-box">
+    <h2 class="result-header">✨ Your Ideal HDFC Product ✨</h2>
+    <div class="result-content">
+        <p id="resultText" class="result-text">Your recommended HDFC product will appear here.</p>
+        <div class="result-images">
+            <img src="1.webp" alt="Account 1" class="result-image">
+            <img src="2.jpeg" alt="Account 2" class="result-image">
+            <img src="3.webp" alt="Account 3" class="result-image">
+        </div>
+    </div>
+    <button id="closeResult" class="close-button">Close</button>
+</div>
+
+
+        <!-- Feedback Form -->
+        <div id="feedbackForm" class="feedback-box">
+            <h2>Feedback</h2>
+            <label for="rating">Rate Us:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" placeholder="Write your feedback here..." required></textarea>
+
+            <button id="submitFeedback" class="submit-button">Submit Feedback</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
